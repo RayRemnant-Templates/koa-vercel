@@ -12,14 +12,14 @@ app.use(cors());
 app.use(helmet());
 app.use(bodyParser());
 
-router.get("/", (ctx) => {
+router.get("/api", (ctx) => {
     ctx.response.set('Content-Type', 'text/html');
     ctx.response.set('Cache-Control', 's-max-age=1, stale-while-revalidate');
     ctx.response.body =
         "As we all stand on the shoulders of giants, tomorrow I hope to be the same for you.";
 });
 
-router.post("/", (ctx) => {
+router.post("/api", (ctx) => {
     ctx.response.body =
         "As we all stand on the shoulders of giants, tomorrow I hope to be the same for you.";
 });
